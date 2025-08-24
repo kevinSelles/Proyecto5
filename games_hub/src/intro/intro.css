@@ -1,0 +1,44 @@
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  text-align: center;
+  background-color: black;
+}
+
+#intro-video {
+  max-width: 80%;
+  height: auto;
+  z-index: 1;
+}
+
+.intro-text {
+  position: absolute;
+  width: 100%;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  font-family: "Press Start 2P", Roboto, sans sans-serif;
+  z-index: 2;
+}
+
+.intro-top {
+  top: 20%;
+}
+
+.intro-bottom {
+  bottom: 20%;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
