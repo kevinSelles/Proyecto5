@@ -1,5 +1,5 @@
 .intro {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +8,9 @@
   gap: 20px;
   text-align: center;
   background-color: black;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.8s ease;
 }
 
 #intro-video {
@@ -19,18 +22,24 @@
 .intro-text {
   position: absolute;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: whitesmoke;
   font-family: "Press Start 2P", Roboto, sans sans-serif;
   z-index: 2;
+  text-shadow: 
+    0 0 5px #00faff,
+    0 0 10px #00faff,
+    0 0 20px #00faff,
+    0 0 40px #00e5ff,
+    0 0 80px #00e5ff;
 }
 
 .intro-top {
-  top: 20%;
+  top: 25%;
 }
 
 .intro-bottom {
-  bottom: 20%;
+  bottom: 25%;
   animation: blink 3s infinite;
 }
 

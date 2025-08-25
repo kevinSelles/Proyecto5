@@ -15,6 +15,7 @@ export function getIntro() {
   introVideo.playsInline = true;
   introVideo.id = "intro-video";
   introVideo.src = "assets/video/loading.webm";
+  introVideo.playbackRate = 1.5;
 
   const bottomText = document.createElement("p");
   bottomText.textContent = "Por favor, espere";
@@ -24,6 +25,18 @@ export function getIntro() {
   intro.appendChild(introVideo);
   intro.appendChild(bottomText);
   document.body.appendChild(intro);
+
+  introVideo.addEventListener("ended", () => {
+    intro.style.opacity = "0";
+
+    setTimeout(() => {
+      intro.style.display = "none";
+      const header = document.querySelector("header")
+      if(header) {
+      header.style.display = "block";
+      }
+    }, 800);
+  });
 
   return intro;
 }
