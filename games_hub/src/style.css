@@ -1,11 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
-  font-family: "atari";
-  src: url("/assets/fonts/mario.ttf") format("truetype");
+  font-family: "pokemon";
+  src: url("/assets/fonts/pocketMonk.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffd700, #ffb700);
+  border-radius: 10px;
+  border: 2px solid #222;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffea00, #ffc200);
+  box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+}
+
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #ffd700 #222;
 }
 
 * {
@@ -18,6 +45,11 @@ body, html {
   height: 100%;
   font-family: Roboto, sans-serif;
   background: linear-gradient(to bottom, #88fbff, #0066ff);
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ffd700 #222;
 }
 
-
+body.intro-active {
+  overflow: hidden;
+}

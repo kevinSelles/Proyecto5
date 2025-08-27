@@ -5,6 +5,8 @@ export function getIntro() {
   const intro = document.createElement("section");
   intro.classList.add("intro");
 
+  document.body.classList.add("intro-active");
+
   const topText = document.createElement("p");
   topText.textContent = "Cargando juegos";
   topText.classList.add("intro-text", "intro-top");
@@ -31,7 +33,8 @@ export function getIntro() {
 
     setTimeout(() => {
       intro.style.display = "none";
-      const header = document.querySelector("header")
+      document.body.classList.remove("intro-active");
+      const header = document.querySelector("header");
       if(header) {
       header.style.display = "block";
       }

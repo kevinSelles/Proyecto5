@@ -1,4 +1,5 @@
 main {
+  width: 100%;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -8,4 +9,109 @@ main {
   align-items: center;
   justify-items: center;
   justify-content: space-between;
+  margin: 20px 0;
+}
+
+.categories {
+  color: whitesmoke;
+  font-family: pokemon, Roboto, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 10px;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+  z-index: 4;
+}
+
+.game {
+  width: 50%;
+  height: 350px;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  border: 10px solid rgba(255,255,255,0.2);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,0,0,0.1));
+  z-index: 4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+.game1 {
+  background-color: rgb(0, 209, 0);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,0.2));
+}
+
+.game2 {
+  background-color: red;
+}
+
+.game3 {
+  background-color: purple;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,0.2));
+}
+
+.game img {
+  width: 150px;
+  height: 150px;
+}
+
+.game-title {
+  font-family: pokemon;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.game-p {
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.fish {
+  position: absolute;
+  width: 70px;
+  left: 100vw;
+  pointer-events: none;
+  animation: swim linear infinite;
+}
+
+.fish1 { 
+  bottom: 40px; 
+  animation-duration: 45s;
+  z-index: 1;
+}
+.fish2 { 
+  bottom: 220px; 
+  animation-duration: 37s;
+  z-index: 2;
+}
+.fish3 { 
+  bottom: 130px; 
+  animation-duration: 29s;
+  z-index: 3;
+}
+
+@keyframes swim {
+  0%   { transform: translateX(0) translateY(0); }
+  25%  { transform: translateX(-28vw) translateY(-10vw); }
+  50%  { transform: translateX(-54vw) translateY(0vw); }
+  75%  { transform: translateX(-78vw) translateY(-10vw); }
+  100% { transform: translateX(-105vw) translateY(0vw); }
 }

@@ -1,0 +1,89 @@
+.tres-raya {
+  width: 60%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0;
+  background-color: whitesmoke;
+  align-items: center;
+  justify-items: center;
+  border-radius: 40px;
+  padding: 50px;
+}
+
+.tres-raya button {
+  width: 100%;
+  aspect-ratio: 1/1;;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.button0 { 
+  border-bottom: 10px solid black; 
+  border-right: 10px solid black;
+  border-left: none;
+  border-top: none;
+}
+
+.button1 { 
+  border-bottom: 10px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+.button2 {
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+  border-top: none;
+  border-right: none;
+}
+
+.button3 {
+  border-right: 10px solid black;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.button4 {
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.button5 {
+  border-left: 10px solid black;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.button6 {
+  border-top: 10px solid black;
+  border-right: 10px solid black;
+  border-bottom: none;
+  border-left: none;
+}
+
+.button7 {
+  border-top: 10px solid black;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.button8 {
+  border-top: 10px solid black;
+  border-left: 10px solid black;
+  border-right: none;
+  border-bottom: none;
+}
+
+.tres-raya button img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
