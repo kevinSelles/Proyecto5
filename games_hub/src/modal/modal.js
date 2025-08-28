@@ -1,6 +1,6 @@
 import "./modal.css";
 
-import { getTresRaya } from "../juego1/tresRaya";
+import { getTresRaya } from "../tresRaya/tresRaya";
 
 export function getModal() {
 

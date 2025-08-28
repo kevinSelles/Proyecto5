@@ -1,20 +1,35 @@
 .tres-raya {
-  width: 60%;
-  max-width: 600px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0;
+  width: 80%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: whitesmoke;
+  border-radius: 40px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(3, minmax(100px, 1fr));
   align-items: center;
   justify-items: center;
   border-radius: 40px;
-  padding: 50px;
+  background-color: yellowgreen;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
-.tres-raya button {
+.board button {
   width: 100%;
-  aspect-ratio: 1/1;;
+  height: 100%;
+  aspect-ratio: 1/1;
   cursor: pointer;
   background-color: transparent;
 }
@@ -82,8 +97,32 @@
   border-bottom: none;
 }
 
-.tres-raya button img {
+.board button img {
   width: 80%;
   height: 80%;
   object-fit: contain;
+}
+
+.score-container {
+
+  min-width: 250px;
+  display: grid;
+  grid-template-areas: 
+    ".score-title .score-title"
+    ".imgX .scoreX"
+    ".imgO .scoreO";
+  align-items: center;
+  justify-items: center;
+  background-color: yellow;
+}
+
+.score-title {
+  font-family: pokemon, Roboto, sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.img-x, .img-o {
+  width: 100px;
 }
