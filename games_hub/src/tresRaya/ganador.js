@@ -1,3 +1,6 @@
+import { calculatingScore } from "./marcador";
+import { getSetGameOver } from "./gameOver";
+
 export function getWinner() {
 
   const b0 = document.querySelector(".button0 img");
@@ -38,11 +41,15 @@ export function getWinner() {
   }
 
   if(winner) {
+    calculatingScore(winner);
     alert(`¡Ganaste ${winner}!`);
+    getSetGameOver(true);
+    return winner;
   };
 
   if(winner === null && b0 && b1 && b2 && b3 && b4 && b5 && b6 && b7 && b8) {
     alert("¡Empate!")
+    getSetGameOver(true);
   }
 
   return null;

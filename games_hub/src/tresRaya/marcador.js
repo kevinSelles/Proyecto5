@@ -1,6 +1,9 @@
 let winsX = 0;
 let winsO = 0;
 
+let finalWinX = null;
+let finalWinO = null;
+
 export function getScore() {
 
   const score = document.createElement("div");
@@ -20,27 +23,67 @@ export function getScore() {
   imgO.classList.add("img-o");
   imgO.alt = "O";
 
-  const scoreX = document.createElement("p");
-  scoreX.textContent = winsX;
+  const finalWinX = document.createElement("p");
+  finalWinX.textContent = winsX;
+  finalWinX.classList.add("score-x");
 
-  const scoreO = document.createElement("p");
-  scoreO.textContent = winsO;
+  const finalWinO = document.createElement("p");
+  finalWinO.textContent = winsO;
+  finalWinO.classList.add("score-o");
 
   score.appendChild(scoreTitle);
   score.appendChild(imgX);
-  score.appendChild(scoreX);
+  score.appendChild(finalWinX);
   score.appendChild(imgO);
-  score.appendChild(scoreO);
+  score.appendChild(finalWinO);
 
   return score;
 }
 
 export function calculatingScore(winner) {
 
-  if(winner === X) {
+  if(winner === "X") {
     winsX++;
-  }
-  if(winner === O) {
+  } else if(winner === "O") {
     winsO++;
+    } else {
+      return;
+      }
+
+  if (finalWinX) {
+    finalWinX.textContent = winsX;
+  } else {
+    const el = document.querySelector(".score-x");
+    if (el) el.textContent = winsX;
+  }
+  if (finalWinO) {
+    finalWinO.textContent = winsO;
+  } else {
+    const el = document.querySelector(".score-o");
+    if (el) el.textContent = winsO;
   }
 }
+
+export function resetScores() {
+
+  winsX = 0;
+  winsO = 0;
+
+  if(finalWinX) {
+    finalWinX.textContent = winsX;
+  } else {
+    const el = document.querySelector(".score-x");
+    if (el) el.textContent = winsX;
+  }
+  if(finalWinO) {
+    finalWinO.textContent = winsO;
+  } else {
+    const el = document.querySelector(".score-o");
+    if (el) el.textContent = winsO;
+  }
+}
+
+export function getWins() {
+  
+  return {winsX, winsO};
+};

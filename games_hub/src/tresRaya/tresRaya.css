@@ -8,6 +8,9 @@
   border-radius: 40px;
   gap: 20px;
   padding: 20px;
+  background: url(/assets/img/cuaderno.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .board {
@@ -21,7 +24,6 @@
   align-items: center;
   justify-items: center;
   border-radius: 40px;
-  background-color: yellowgreen;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -104,25 +106,67 @@
 }
 
 .score-container {
-
   min-width: 250px;
   display: grid;
   grid-template-areas: 
-    ".score-title .score-title"
-    ".imgX .scoreX"
-    ".imgO .scoreO";
+    "title title"
+    "imgX scoreX"
+    "imgO scoreO"
+    "board board"
+    "scores scores";
   align-items: center;
   justify-items: center;
-  background-color: yellow;
+  gap: 10px;
 }
 
 .score-title {
-  font-family: pokemon, Roboto, sans-serif;
+  grid-area: title;
+  font-family: Roboto, sans-serif;
   font-size: 2.5rem;
   letter-spacing: 5px;
-  font-weight: bold;
 }
 
 .img-x, .img-o {
   width: 100px;
+}
+
+.img-x {
+  grid-area: imgX;
+}
+
+.imgO {
+  grid-area: imgO;
+}
+
+.score-x {
+  grid-area: scoreX;
+  font-size: 6rem;
+}
+
+.score-o {
+  grid-area: scoreO;
+  font-size: 6rem;
+}
+
+.score-container button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button-reset-board {
+  background: #ffcc00;
+  grid-area: board;
+}
+
+.button-reset-scores {
+  background: #ff2a2a;
+  color: white;
+  grid-area: scores;
+}
+
+.turn-indicator {
+  background-color: green;
 }
