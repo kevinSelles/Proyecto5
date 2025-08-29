@@ -1,8 +1,31 @@
+const storageKey = "tresRaya-scores";
+
 let winsX = 0;
 let winsO = 0;
 
 let finalWinX = null;
 let finalWinO = null;
+
+function loadStorageScores() {
+
+  const storageScore = localStorage.getItem(storageKey);
+
+  if(!storageScore) {
+    return;
+  };
+
+  const parsedScore = JSON.parse(storageScore);
+  winsX = parsedScore.winsX || 0;
+  winsO = parsedScore.winsO || 0;
+};
+
+function saveScores() {
+
+  const scoresToSave = {winsX: winsX, winsO: winsO};
+  localStorage.setItem(storageKey, JSON.stringify(scoresToSave));
+};
+
+loadStorageScores();
 
 export function getScore() {
 
@@ -23,11 +46,11 @@ export function getScore() {
   imgO.classList.add("img-o");
   imgO.alt = "O";
 
-  const finalWinX = document.createElement("p");
+  finalWinX = document.createElement("p");
   finalWinX.textContent = winsX;
   finalWinX.classList.add("score-x");
 
-  const finalWinO = document.createElement("p");
+  finalWinO = document.createElement("p");
   finalWinO.textContent = winsO;
   finalWinO.classList.add("score-o");
 
@@ -50,37 +73,21 @@ export function calculatingScore(winner) {
       return;
       }
 
-  if (finalWinX) {
-    finalWinX.textContent = winsX;
-  } else {
-    const el = document.querySelector(".score-x");
-    if (el) el.textContent = winsX;
-  }
-  if (finalWinO) {
-    finalWinO.textContent = winsO;
-  } else {
-    const el = document.querySelector(".score-o");
-    if (el) el.textContent = winsO;
-  }
-}
+  finalWinX.textContent = winsX;
+  finalWinO.textContent = winsO;
+
+  saveScores();
+};
 
 export function resetScores() {
 
   winsX = 0;
   winsO = 0;
 
-  if(finalWinX) {
     finalWinX.textContent = winsX;
-  } else {
-    const el = document.querySelector(".score-x");
-    if (el) el.textContent = winsX;
-  }
-  if(finalWinO) {
     finalWinO.textContent = winsO;
-  } else {
-    const el = document.querySelector(".score-o");
-    if (el) el.textContent = winsO;
-  }
+
+    saveScores();
 }
 
 export function getWins() {

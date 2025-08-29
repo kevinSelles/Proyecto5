@@ -42,7 +42,7 @@ export function getMain() {
     p.textContent = game.text;
     p.classList.add("game-p");
 
-    const button = getMainButtons(modal);
+    const button = getMainButtons(modal, game.title);
 
     section.appendChild(name);
     section.appendChild(gameImg);

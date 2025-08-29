@@ -4,7 +4,6 @@ import { getGameBoard } from "./tablero";
 import { resetBoard } from "./tablero";
 import { getScore } from "./marcador";
 import { resetScores } from "./marcador";
-import { getCurrentPlayer } from "./turnos";
 
 export function getTresRaya() {
 
@@ -32,17 +31,8 @@ export function getTresRaya() {
   scores.appendChild(buttonResetBoard);
   scores.appendChild(buttonResetScores);
 
-  const turnIndicator = document.createElement("div");
-  turnIndicator.classList.add("turn-indicator");
-  turnIndicator.textContent = `Turno: ${getCurrentPlayer()}`;
-
-  boardAndTurns.addEventListener("click", () => {
-    turnIndicator.textContent = `Turno: ${getCurrentPlayer()}`;
-  })
-
   tresRaya.appendChild(boardAndTurns);
   tresRaya.appendChild(scores);
-  tresRaya.appendChild(turnIndicator);
 
   return tresRaya;
 }

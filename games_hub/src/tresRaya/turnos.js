@@ -28,7 +28,3 @@ export function resetTurn(startPlayer = "X") {
   turn = 0;
   currentTurn = startPlayer;
 }
-
-export function getCurrentPlayer() {
-  return currentTurn;
-}

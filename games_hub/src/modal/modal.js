@@ -1,6 +1,7 @@
 import "./modal.css";
 
 import { getTresRaya } from "../tresRaya/tresRaya";
+import { getQuiz } from "../quiz/quiz";
 
 export function getModal() {
 
@@ -17,7 +18,8 @@ export function getModal() {
 
   closeButton.addEventListener("click", () => {
     modal.style.display = "none";
-    const existingGame = document.querySelector(".tres-raya");
+    
+    const existingGame = document.querySelectorAll(".tres-raya", ".quiz");
     if(existingGame) {
       existingGame.remove();
     }
@@ -27,7 +29,13 @@ export function getModal() {
     const tresRaya = getTresRaya();
     modal.appendChild(tresRaya);
     modal.style.display = "flex";
-  }
+  };
+
+  modal.openQuiz = () => {
+    const quiz = getQuiz();
+    modal.appendChild(quiz);
+    modal.style.display = "flex";
+  };
 
   return modal;
 }

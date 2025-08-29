@@ -121,7 +121,7 @@
 
 .score-title {
   grid-area: title;
-  font-family: Roboto, sans-serif;
+  font-family: cursive, sans-serif;
   font-size: 2.5rem;
   letter-spacing: 5px;
 }
@@ -154,6 +154,7 @@
   border: none;
   cursor: pointer;
   font-weight: bold;
+  font-family: cursive;
 }
 
 .button-reset-board {
@@ -162,11 +163,7 @@
 }
 
 .button-reset-scores {
-  background: #ff2a2a;
+  background: #ff0000;
   color: white;
   grid-area: scores;
-}
-
-.turn-indicator {
-  background-color: green;
 }
