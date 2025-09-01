@@ -1,20 +1,19 @@
 footer {
-  height: 50px;
+  min-height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: yellow;
   font-size: 1.2rem;
+  margin: 0;
+  padding: 0 var(--size-small);
+  box-sizing: border-box;
 }
 
 @media (max-width: 632px) {
   footer {
     font-size: 1rem;
     
-  }
-
-  footer p {
-    margin: 0 var(--size-small);
   }
 }

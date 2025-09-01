@@ -2,15 +2,13 @@ main {
   width: 100%;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 
-    ".category1 .category2 .category3",
-    ".game1 .game2 .game3";
+
   align-items: center;
   justify-items: center;
   justify-content: space-between;
   margin: var(--size-large) 0;
   position: relative;
+  flex: 1;
 }
 
 .categories {
@@ -191,5 +189,18 @@ main {
 
   .game-title {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 487px) and (min-height: 678px) {
+
+  .categories {
+    font-size: 2rem;
+  }
+
+  .game {
+    width: 80%;
+    height: 500px;
+    padding: 20px;
   }
 }
