@@ -248,3 +248,17 @@
   height: 50%;
   }
 }
+
+@media (min-width: 487px) and (min-height: 678px) {
+
+  .tres-raya {
+    flex-direction: column;
+  }
+
+  .board {
+    width: 350px;
+    height: 350px;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    }
+}
