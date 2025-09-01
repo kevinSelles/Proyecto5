@@ -249,16 +249,35 @@
   }
 }
 
-@media (min-width: 487px) and (min-height: 678px) {
+@media (min-width: 650px) and (min-height: 678px) {
 
   .tres-raya {
     flex-direction: column;
+    padding-top: 0;
+    gap: 70px;
   }
 
   .board {
     width: 350px;
     height: 350px;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+    grid-template-rows: repeat(3, minmax(130px, 1fr));
     }
+
+      .img-x, .img-o {
+  width: 50px;
+  }
+
+  .score-x, .score-o {
+  font-size: 3rem;
+  }
+
+  .score-title {
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  }
+
+  .score-container {
+  min-width: 150px;
+  }
 }
