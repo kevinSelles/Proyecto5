@@ -4,10 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: var(--first-color);
   border-radius: 40px;
-  gap: 20px;
-  padding: 20px;
+  gap: var(--size-large);
+  padding: var(--size-large);
   background: url(/assets/img/cuaderno.webp);
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@
   justify-items: center;
   border-radius: 40px;
   box-sizing: border-box;
-  padding: 20px;
+  padding: var(--size-large);
 }
 
 .board button {
@@ -37,28 +37,28 @@
 }
 
 .button0 { 
-  border-bottom: 10px solid black; 
-  border-right: 10px solid black;
+  border-bottom: var(--size-small) solid var(--second-color); 
+  border-right: var(--size-small) solid var(--second-color);
   border-left: none;
   border-top: none;
 }
 
 .button1 { 
-  border-bottom: 10px solid black;
+  border-bottom: var(--size-small) solid var(--second-color);
   border-left: none;
   border-top: none;
   border-right: none;
 }
 
 .button2 {
-  border-bottom: 10px solid black;
-  border-left: 10px solid black;
+  border-bottom: var(--size-small) solid var(--second-color);
+  border-left: var(--size-small) solid var(--second-color);
   border-top: none;
   border-right: none;
 }
 
 .button3 {
-  border-right: 10px solid black;
+  border-right: var(--size-small) solid var(--second-color);
   border-left: none;
   border-top: none;
   border-bottom: none;
@@ -72,29 +72,29 @@
 }
 
 .button5 {
-  border-left: 10px solid black;
+  border-left: var(--size-small) solid var(--second-color);
   border-top: none;
   border-bottom: none;
   border-right: none;
 }
 
 .button6 {
-  border-top: 10px solid black;
-  border-right: 10px solid black;
+  border-top: var(--size-small) solid var(--second-color);
+  border-right: var(--size-small) solid var(--second-color);
   border-bottom: none;
   border-left: none;
 }
 
 .button7 {
-  border-top: 10px solid black;
+  border-top: var(--size-small) solid var(--second-color);
   border-bottom: none;
   border-left: none;
   border-right: none;
 }
 
 .button8 {
-  border-top: 10px solid black;
-  border-left: 10px solid black;
+  border-top: var(--size-small) solid var(--second-color);
+  border-left: var(--size-small) solid var(--second-color);
   border-right: none;
   border-bottom: none;
 }
@@ -116,7 +116,7 @@
     "scores scores";
   align-items: center;
   justify-items: center;
-  gap: 10px;
+  gap: var(--size-small);
 }
 
 .score-title {
@@ -164,7 +164,7 @@
 
 .button-reset-scores {
   background: #ff0000;
-  color: white;
+  color: var(--first-color);
   grid-area: scores;
 }
 
@@ -195,7 +195,7 @@
   .board {
   width: 300px;
   height: 300px;
-  margin-right: 20px;
+  margin-right: var(--size-large);
   }
 }
 
@@ -210,7 +210,7 @@
     "imgX scoreX"
     "imgO scoreO"
     "board scores";
-  margin-left: 20px;
+  margin-left: var(--size-large);
   }
 
    .img-x, .img-o {
@@ -219,7 +219,7 @@
 
   .score-title {
   font-size: 1.2rem;
-  margin-top: 20px;
+  margin-top: var(--size-large);
   }
 
   .score-x, .score-o {

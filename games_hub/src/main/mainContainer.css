@@ -9,35 +9,35 @@ main {
   align-items: center;
   justify-items: center;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: var(--size-large) 0;
 }
 
 .categories {
-  color: whitesmoke;
-  font-family: pokemon, Roboto, sans-serif;
+  color: var(--first-color);
+  font-family: var(--font-title);
   font-size: 2rem;
-  letter-spacing: 10px;
+  letter-spacing: var(--size-small);
   text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000;
+    -2px -2px 0 var(--second-color),
+     2px -2px 0 var(--second-color),
+    -2px  2px 0 var(--second-color),
+     2px  2px 0 var(--second-color);
   z-index: 4;
 }
 
 .game {
   width: 50%;
   height: 350px;
-  padding: 10px;
-  margin-top: 20px;
+  padding: var(--size-small);
+  margin-top: var(--size-large);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-  border: 10px solid rgba(255,255,255,0.2);
+  border-radius: var(--size-large);
+  box-shadow: 0 5px var(--size-medium) rgba(0,0,0,0.4);
+  border: var(--size-small) solid rgba(255,255,255,0.2);
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,0,0,0.1));
   z-index: 4;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -45,7 +45,7 @@ main {
 
 .game:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+  box-shadow: 0 var(--size-medium) 25px rgba(0,0,0,0.5);
 }
 
 .game1 {
@@ -68,20 +68,20 @@ main {
 }
 
 .game-title {
-  font-family: pokemon;
-  color: whitesmoke;
+  font-family: var(--font-title);
+  color: var(--first-color);
   font-size: 1.5rem;
   letter-spacing: 5px;
   text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+    -1px -1px 0 var(--second-color),
+     1px -1px 0 var(--second-color),
+    -1px  1px 0 var(--second-color),
+     1px  1px 0 var(--second-color);
 }
 
 .game-p {
   font-weight: bold;
-  color: whitesmoke;
+  color: var(--first-color);
 }
 
 .fish {
@@ -146,11 +146,11 @@ main {
   .categories {
     font-size: 1.1rem;
     text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
-    margin-left: 15px;
+    -1px -1px 0 var(--second-color),
+     1px -1px 0 var(--second-color),
+    -1px  1px 0 var(--second-color),
+     1px  1px 0 var(--second-color);
+    margin-left: var(--size-medium);
   }
 }
 

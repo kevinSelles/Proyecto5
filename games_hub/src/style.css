@@ -8,6 +8,19 @@
   font-display: swap;
 }
 
+:root {
+  --first-color: whitesmoke;
+  --second-color: black;
+  --background-color: linear-gradient(to bottom, #88fbff, #0066ff);
+
+  --size-large: 20px;
+  --size-medium: 15px;
+  --size-small: 10px;
+
+  --font-title: pokemon, cursive;
+  --font-default: roboto, sans-serif;
+}
+
 
 body::-webkit-scrollbar {
   width: 12px;
@@ -15,12 +28,12 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background: #222;
-  border-radius: 10px;
+  border-radius: var(--size-small);
 }
 
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #ffd700, #ffb700);
-  border-radius: 10px;
+  border-radius: var(--size-small);
   border: 2px solid #222;
 }
 
@@ -28,7 +41,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #ffea00, #ffc200);
   box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
 }
-
 
 body {
   scrollbar-width: thin;
@@ -43,8 +55,8 @@ body {
 
 body, html {
   height: 100%;
-  font-family: Roboto, sans-serif;
-  background: linear-gradient(to bottom, #88fbff, #0066ff);
+  font-family: var(--font-default);
+  background: var(--background-color);
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #ffd700 #222;
