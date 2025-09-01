@@ -10,6 +10,7 @@ main {
   justify-items: center;
   justify-content: space-between;
   margin: var(--size-large) 0;
+  position: relative;
 }
 
 .categories {
