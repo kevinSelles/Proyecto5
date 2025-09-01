@@ -1,6 +1,6 @@
 import { getSimonButtons } from "./botonesSimon.js";
 import { playSequence } from "./secuencia.js";
-import { handleButtonClick } from "./logicaDeJuego.js";
+import { handleButtonClick } from "./gestionDeTurnos.js";
 import { resetScore } from "./contadorSimon.js";
 
 export function getSimonGame(bottomDiv, counters) {
@@ -8,7 +8,7 @@ export function getSimonGame(bottomDiv, counters) {
   const colors = Object.keys(buttons);
   const state = {
     sequence: [],
-    playerIndex: { value: 0 },
+    playerIndex: 0,
     totalCorrect: 0,
     isPlayingSequence: false,
     buttons,
@@ -24,7 +24,7 @@ export function getSimonGame(bottomDiv, counters) {
     }
 
     state.sequence = [colors[Math.floor(Math.random() * colors.length)]];
-    state.playerIndex.value = 0;
+    state.playerIndex = 0;
     state.totalCorrect = 0;
     resetScore(counters);
 
