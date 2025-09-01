@@ -167,3 +167,84 @@
   color: white;
   grid-area: scores;
 }
+
+@media (max-width: 920px) {
+
+  .img-x, .img-o {
+  width: 50px;
+  }
+
+  .score-x, .score-o {
+  font-size: 3rem;
+  }
+
+  .score-title {
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  }
+
+  .score-container {
+  min-width: 150px;
+  }
+
+  .board button img {
+  width: 70%;
+  height: 70%;
+  }
+
+  .board {
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+  }
+}
+
+@media (max-width: 695px) {
+  .tres-raya {
+  flex-direction: column;
+  }
+
+  .score-container {
+  grid-template-areas: 
+    "title title"
+    "imgX scoreX"
+    "imgO scoreO"
+    "board scores";
+  margin-left: 20px;
+  }
+
+   .img-x, .img-o {
+  width: 30px;
+  }
+
+  .score-title {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  }
+
+  .score-x, .score-o {
+  font-size: 2rem;
+  }
+
+  .score-container button {
+  padding: 5px 8px;
+  }
+
+  .board {
+  margin-right: 0px;
+  }
+}
+
+@media (max-width: 465px) {
+  .board {
+  width: 200px;
+  height: 200px;
+  grid-template-columns: repeat(3, minmax(70px, 1fr));
+  grid-template-rows: repeat(3, minmax(70px, 1fr));
+  }
+
+  .board button img {
+  width: 50%;
+  height: 50%;
+  }
+}

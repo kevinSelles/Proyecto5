@@ -103,7 +103,7 @@ export const questions = [
     difficulty: "medium"
   },
   {
-    question: "¿De qué color es la segunda O de Google?",
+    question: "¿De qué color es la segunda O en el logo de Google?",
     options: ["Amarilla", "Roja", "Azul", "Verde"],
     correctIndex: 0,
     difficulty: "medium"
@@ -146,7 +146,7 @@ export const questions = [
   },
    {
     question: 'Todos conocemos la expresión argentina "boludo", pero ¿Qué significa esta palabra en El Salvador?',
-    options: ["Persona adinerada o rica", "Tonto, estupido, torpe", "Tipo de chaqueta tejida con lana", "Anciano"],
+    options: ["Persona adinerada o rica", "Tonto, estupido, torpe", "Tipo de chaqueta tejida con bolas de lana", "Anciano"],
     correctIndex: 0,
     difficulty: "hard"
   },

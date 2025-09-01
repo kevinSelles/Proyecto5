@@ -53,3 +53,17 @@ body, html {
 body.intro-active {
   overflow: hidden;
 }
+
+@media (max-width: 578px) {
+
+  body {
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 486px) {
+
+  body {
+    overflow-y: auto;
+  }
+}

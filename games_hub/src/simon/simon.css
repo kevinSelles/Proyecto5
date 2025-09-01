@@ -1,0 +1,136 @@
+.simon {
+  max-width: 600px;
+  margin: 20px auto;
+  background: black;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+  padding: 25px;
+  color: white;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+.simon-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.simon-start-button {
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ff0066, #ff3399);
+  color: white;
+  font-size: 18px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 20px;
+  box-shadow: 0 0 10px rgba(255,0,150,0.6);
+}
+
+.simon-start-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,0,150,1);
+}
+
+.simon-counters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.simon-counters p {
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #111;
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+  box-shadow: inset 0 0 10px #0f0, 0 0 5px #0f0;
+}
+
+.simon-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.simon-button {
+  width: 100%;
+  height: 140px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  box-shadow: inset -4px -4px 10px rgba(0,0,0,0.8),
+              inset 4px 4px 15px rgba(255,255,255,0.1);
+}
+
+.simon-button:hover {
+  transform: scale(1.08);
+}
+
+.simon-button.active {
+  filter: brightness(160%);
+  box-shadow: 0 0 25px currentColor, 0 0 40px currentColor;
+  transform: scale(1.1);
+}
+
+.simon-button:active {
+  filter: brightness(160%);
+  box-shadow: 0 0 25px currentColor, 0 0 40px currentColor;
+  transform: scale(1.1);
+}
+
+.simon-button.yellow {
+  background-color: #ffeb3b;
+  color: #ffeb3b;
+}
+.simon-button.red {
+  background-color: #f44336;
+  color: #f44336;
+}
+.simon-button.blue {
+  background-color: #2196f3;
+  color: #2196f3;
+}
+.simon-button.green {
+  background-color: #4caf50;
+  color: #4caf50;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.simon-bottom button, .simon-counters p {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@media (max-width: 436px) {
+
+  .simon-button {
+    width: 80%;
+    height: 100px;
+  }
+
+  .simon-start-button {
+  padding: 10px 10px;
+  font-size: 14px;
+  margin: 0
+}
+
+  .simon-counters {
+    gap: 10px;
+  }
+}

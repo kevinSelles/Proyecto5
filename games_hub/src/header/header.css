@@ -23,7 +23,8 @@ header {
   position: absolute;
   top: 0; 
   left: 0;
-  width: 100%; height: 100%;
+  width: 100%; 
+  height: 100%;
   background-image: url("/assets/img/cloud.webp");
   background-repeat: repeat-x;
   background-size: auto 100%;
@@ -63,4 +64,26 @@ h1 {
 @keyframes scroll-bg {
   from { background-position: 0 0; }
   to   { background-position: -720px 0; }
+}
+
+@media (max-width: 738px) {
+  h1 {
+    font-size: 3rem;
+    text-shadow: 
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+  }
+}
+
+@media (max-width: 566px) {
+  h1 {
+    font-size: 2rem;
+    text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+  }
 }

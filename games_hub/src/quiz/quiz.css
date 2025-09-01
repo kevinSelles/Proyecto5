@@ -1,0 +1,126 @@
+.quiz {
+  max-width: 600px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #1e1e3f, #3f1e5f);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  padding: 20px;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.difficulty-button {
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.difficulty-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.difficulty-button.easy {
+  background-color: green;
+  color: white;
+}
+
+.difficulty-button.normal {
+  background-color: goldenrod;
+  color: black;
+}
+
+.difficulty-button.hard {
+  background-color: red;
+  color: white;
+}
+
+.score-counter {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.1);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.quiz-bottom {
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 20px;
+  background: url(/assets/img/trivial.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: right;
+}
+
+.option-button {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.option-button:hover {
+  background-color: #ffcc00;
+  color: black;
+  transform: scale(1.03);
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-bottom p, .option-button {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.question-text{
+background-color: rgba(0, 0, 0, 0.7);
+color: white;
+padding: 10px;
+text-align: center;
+}
+
+.countdown {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  color: #ffd700;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+@media (max-width: 438px) {
+  
+  .difficulty-button {
+  padding: 8px 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  }
+}
