@@ -17,7 +17,7 @@ export function initQuizPreguntas(bottomDiv, scoreCounter) {
     bottomDiv.textContent = "";
 
     if (currentIndex >= currentQuestions.length) {
-      bottomDiv.textContent = "Has completado esta dificultad!";
+      bottomDiv.textContent = "¡Has completado esta dificultad!";
       return;
     }
 
