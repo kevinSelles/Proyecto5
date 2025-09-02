@@ -127,7 +127,7 @@
   .simon-start-button {
   padding: var(--size-small);
   font-size: 14px;
-  margin: 0
+  margin-left: 10px;
 }
 
   .simon-counters {

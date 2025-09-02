@@ -168,7 +168,7 @@
   grid-area: scores;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1050px) {
 
   .img-x, .img-o {
   width: 50px;
@@ -249,7 +249,7 @@
   }
 }
 
-@media (min-width: 650px) and (min-height: 678px) {
+@media (min-width: 650px) and (min-height: 750px) {
 
   .tres-raya {
     flex-direction: column;
@@ -262,10 +262,10 @@
     height: 350px;
     grid-template-columns: repeat(3, minmax(130px, 1fr));
     grid-template-rows: repeat(3, minmax(130px, 1fr));
-    }
+  }
 
-      .img-x, .img-o {
-  width: 50px;
+  .img-x, .img-o {
+    width: 50px;
   }
 
   .score-x, .score-o {
@@ -279,5 +279,107 @@
 
   .score-container {
   min-width: 150px;
+  }
+}
+
+@media (min-width: 999px) and (min-height: 750px) {
+
+  .tres-raya {
+    flex-direction: row;
+  }
+
+ .img-x, .img-o {
+    width: 70px;
+  }
+
+  .score-x, .score-o {
+    font-size: 3.5rem;
+  }
+
+  .score-title {
+    font-size: 2rem;
+    letter-spacing: 0px;
+  }
+
+  .score-container {
+    min-width: 200px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 999px) and (min-height: 750px) {
+
+  .board {
+    width: 400px;
+    height: 400px;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-rows: repeat(3, minmax(180px, 1fr));
+    margin-right: 100px;
+    margin-bottom: 150px;
+  }
+}
+
+@media (min-width: 500px) and (min-height: 1000px) {
+
+  .tres-raya{
+    height: 60vh;
+  }
+}
+
+@media (min-width: 650px) and (min-height: 1000px) {
+
+  .tres-raya {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 950px) and (min-height: 1000px) {
+
+  .tres-raya {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1050px) and (min-height: 1000px) {
+
+  .board {
+    width: 400px;
+    height: 400px;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, minmax(150px, 1fr));
+    margin-right: 20px;
+    }
+}
+
+@media (min-width: 1250px) and (min-height: 1000px) {
+
+  .img-x, .img-o {
+    width: 70px;
+  }
+
+  .score-x, .score-o {
+    font-size: 3.5rem;
+  }
+
+  .score-title {
+    font-size: 2rem;
+    letter-spacing: 0px;
+  }
+
+  .score-container {
+    min-width: 200px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1500px) and (min-height: 1000px) {
+
+  .board {
+    width: 400px;
+    height: 400px;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-rows: repeat(3, minmax(180px, 1fr));
+    margin-right: 100px;
+    margin-bottom: 150px;
   }
 }

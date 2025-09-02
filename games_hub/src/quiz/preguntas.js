@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "¿Qué animal es el amigo amarillo de Pocoyó?",
+    question: "¿Qué tipo de animal es el amigo amarillo de Pocoyó?",
     options: ["Pato", "Conejo", "Elefante", "Grillo"],
     correctIndex: 0,
     difficulty: "easy"
@@ -13,7 +13,7 @@ export const questions = [
     difficulty: "easy"
   },
    {
-    question: "¿Qué famoso monumento puedes ver si navegas por el rio Sena?",
+    question: "¿Qué famoso monumento puedes ver si navegas por el río Sena?",
     options: ["Puerta de Brandeburgo", "Torre Eiffel", "Coliseo de Roma", "Estatua de la Libertad"],
     correctIndex: 1,
     difficulty: "easy"
@@ -67,7 +67,7 @@ export const questions = [
     difficulty: "medium"
   },
    {
-    question: "¿Qué rio es el más caudaloso del mundo?",
+    question: "¿Qué río es el más caudaloso del mundo?",
     options: ["Amazonas", "Nilo", "Misisipi", "Ebro"],
     correctIndex: 0,
     difficulty: "medium"
@@ -79,8 +79,8 @@ export const questions = [
     difficulty: "medium"
   },
    {
-    question: "¿Cómo se llama la famosa base militar de la que se dice que puedes ver ovnis?",
-    options: ["Area 41", "Area 51", "Area 61", "Area 66"],
+    question: "¿Cómo se llama la famosa base militar en la que se dice que puedes ver ovnis?",
+    options: ["Área 41", "Área 51", "Área 61", "Área 66"],
     correctIndex: 1,
     difficulty: "medium"
   },
@@ -91,7 +91,7 @@ export const questions = [
     difficulty: "medium"
   },
    {
-    question: "¿Cuál es la canción más reproducida en YouTube?",
+    question: "¿Cuál es la canción más reproducida en la historia de YouTube?",
     options: ["Despacito, de Luis Fonsi", "Bohemian Rhapsody, de Queen", "Gangnam Style, de Psy", "Baby Shark, de Pinkfong"],
     correctIndex: 3,
     difficulty: "medium"
@@ -110,7 +110,7 @@ export const questions = [
   },
   {
     question: '¿De qué grupo es la popular canción "Fiesta Pagana"?',
-    options: ["Mecano", "La Oreja de Van Gogh", "Mago de Oz", "El Canto del Loco"],
+    options: ["Mecano", "La Oreja de Van Gogh", "Mägo de Oz", "El Canto del Loco"],
     correctIndex: 2,
     difficulty: "medium"
   },
